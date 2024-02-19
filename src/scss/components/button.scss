@@ -1,0 +1,70 @@
+.button {
+  $self: &;
+  padding: 15px 30px;
+  background: var(--button-color);
+  border-radius: 35px;
+  border: 1px solid var(--green);
+  color: #fff;
+  opacity: 1;
+  transition: all 0.5s ease;
+
+  &__icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 16px;
+      height: 16px;
+      color: #37454a;
+      opacity: 0.6;
+    }
+  }
+
+  &.is-success {
+    background: var(--primary);
+    color: var(--white);
+  }
+
+  &.is-error {
+    background: var(--red);
+    color: var(--white);
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &-outlined {
+    background: var(--white);
+    color: var(--primary);
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+
+    &:hover {
+      --bs-success-rgb: var(--white);
+      opacity: 1;
+      background: var(--button-color);
+      color: var(--white);
+    }
+  }
+
+  &-has_icon {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    margin: 0 auto;
+    text-transform: uppercase;
+  }
+}

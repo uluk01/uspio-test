@@ -1,0 +1,16 @@
+<button
+  class="button @@if (context.icon){button-has_icon} @@if (context.outlined){button-outlined}"
+  type="button"
+  @@if(context.modal){data-bs-toggle="modal"
+  data-bs-target="#@@modal"
+  }
+>
+  <span class="button__text">@@text</span>
+  @@if (context.icon){
+  <span class="button__icon">
+    <svg viewBox="0 0 7 10">
+      <use xlink:href="images/sprite.svg#@@icon"></use>
+    </svg>
+  </span>
+  }
+</button>

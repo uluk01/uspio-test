@@ -1,0 +1,74 @@
+@use 'sass:math';
+
+@mixin no-outline {
+  &,
+  &:hover,
+  &:active,
+  &:focus {
+    outline: 0;
+  }
+}
+
+@mixin button-reset {
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  cursor: pointer;
+  user-select: none;
+  @include no-outline;
+
+  * {
+    pointer-events: none;
+  }
+}
+
+@mixin input-reset {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  background: transparent;
+  color: inherit;
+  border-radius: 0;
+  @include no-outline;
+  &:disabled {
+    cursor: default;
+    opacity: 0.7;
+  }
+}
+
+@mixin hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: (1400px)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: (768px)) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (min-width: (576px)) {
+    @content;
+  }
+}
+
+@function rem($size) {
+  $remSize: math.div(parseInt($size), parseInt(16px));
+  @return $remSize * 1rem;
+}
+
+@function parseInt($n) {
+  @return math.div($n, $n * 0 + 1);
+}

@@ -1,0 +1,29 @@
+@use '../utils/mixins.scss';
+
+img,
+svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+svg {
+  * {
+    transform-origin: center;
+    transform-box: fill-box; // make elements relative to its position inside svg coordinates
+  }
+}
+
+body {
+  font-weight: 400;
+  line-height: mixins.rem(22);
+  color: var(--primary);
+}
+
+img:not([src]) {
+  visibility: hidden;
+}
+
+button {
+  @include mixins.button-reset;
+}

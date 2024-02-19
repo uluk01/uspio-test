@@ -1,0 +1,52 @@
+.work {
+  --circle: url('data:image/svg+xml,<svg width="266" height="181" viewBox="0 0 266 181" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M245.085 124.382C245.184 62.4793 195.082 12.2166 133.179 12.1176C71.2763 12.0185 21.0136 62.1205 20.9146 124.024C20.8155 185.927 70.9175 236.189 132.821 236.288C152.793 236.32 171.553 231.127 187.808 221.997" stroke="%2376B926" stroke-opacity="0.5" stroke-width="40"/></svg>');
+  --circle-position: center center;
+  .circle-top-right & {
+    --circle: url('data:image/svg+xml,<svg width="233" height="181" viewBox="0 0 233 181" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M135.83 230.407C194.485 210.619 225.993 147.028 206.204 88.3728C186.416 29.7177 122.825 -1.78986 64.1698 17.9986C44.8494 24.5167 28.4746 35.7872 15.9081 50.0684" stroke="%2376B926" stroke-opacity="0.5" stroke-width="40"/></svg>');
+    --circle-position: center center;
+  }
+  .cirscle-bottom & {
+    --circle: url('data:image/svg+xml,<svg width="265" height="156" viewBox="0 0 265 156" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M24.4012 70.9297C8.774 130.828 44.6627 192.053 104.561 207.68C164.459 223.308 225.684 187.419 241.312 127.521C252.286 85.4567 237.854 42.7381 207.543 15.6167" stroke="%2376B926" stroke-opacity="0.5" stroke-width="40"/></svg>');
+    --circle-position: center bottom;
+  }
+
+  &__image {
+    position: relative;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    height: 180px;
+    overflow: hidden;
+    background-color: #edeef0;
+    padding-top: 11px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: var(--circle);
+      background-repeat: no-repeat;
+      background-position: var(--circle-position);
+    }
+
+    &_circle {
+      height: 224px;
+      width: 224px;
+      border-radius: 50%;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+  &__title {
+    margin-bottom: 15px;
+  }
+}

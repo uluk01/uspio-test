@@ -1,0 +1,17 @@
+@use '../utils/mixins.scss';
+
+.hero {
+  &__image {
+    position: relative;
+    @include mixins.desktop {
+      padding-left: 87px;
+    }
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

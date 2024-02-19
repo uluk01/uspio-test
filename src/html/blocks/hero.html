@@ -1,0 +1,25 @@
+<section class="hero bg-light">
+  <div class="container">
+    <div class="hero__inner row g-0">
+      <div class="col-md-7 pe-3">
+        <div class="hero__content pt-3 pb-5">
+          @@include('../components/breadcrumbs.html')
+          <h1 class="display-6 mt-xl-4 mb-xl-5 mt-3 mb-4 fw-bold">Заголовок <span class="text-success">текст текст</span> текст текст текст текст</h1>
+          <div class="mb-4">
+            <p class="mb-3">
+              текст текст, текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+              текст текст текст текст текст.
+            </p>
+            <p>Текст – текст текст текст текст текст , текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст.</p>
+          </div>
+          @@include( '../components/button.html', { 'text': 'Записаться на проверку', 'modal': 'appointmentModal' ,'outlined': 'true'})
+        </div>
+      </div>
+      <div class="hero__image col-md-5 d-none d-md-flex">
+        <a href="images/hero.jpg" data-fancybox data-caption="Hero Image">
+          <img class="img-fluid" src="images/hero.jpg" alt="Hero Image" loading="lazy" />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

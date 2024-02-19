@@ -1,0 +1,28 @@
+<section id="points" class="points">
+  <div class="container">
+    <div class="points__inner pb-5">
+      <h3 class="text-center fw-bold m-0">Заголовок заголовок заголовок</h3>
+      <div class="points__list my-4 row gx-4">
+        <div class="col-md-6 col-lg-4 py-2">
+          @@include('../components/point.html', { 'text': 'Текст Текст текст Текст текст Текст', 'icon': 'point_1' })
+        </div>
+        <div class="col-md-6 col-lg-4 py-2">
+          @@include('../components/point.html', { 'text': 'Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст', 'icon': 'point_2' })
+        </div>
+        <div class="col-md-6 col-lg-4 py-2">@@include('../components/point.html', { 'text': 'Текст Текст Текст Текст', 'icon': 'point_3' })</div>
+        <div class="col-md-6 col-lg-4 py-2">
+          @@include('../components/point.html', { 'text': 'Текст Текст Текст Текст Текст Текст Текст Текст', 'icon': 'point_4' })
+        </div>
+        <div class="col-md-6 col-lg-4 py-2">
+          @@include('../components/point.html', { 'text': 'Текст Текст Текст Текст Текст Текст', 'icon': 'point_5' })
+        </div>
+        <div class="col-md-6 col-lg-4 py-2">
+          @@include('../components/point.html', { 'text': 'Текст Текст текст Текст текст Текст', 'icon': 'point_6' })
+        </div>
+      </div>
+      <div class="points__button text-center">
+        @@include('../components/button.html', {'text': 'Записаться на проверку ', 'icon': 'angle', 'modal': 'appointmentModal'})
+      </div>
+    </div>
+  </div>
+</section>

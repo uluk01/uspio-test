@@ -1,0 +1,90 @@
+@use '../utils/mixins.scss';
+
+.header {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  background: var(--white);
+
+  &__inner {
+    height: var(--header-height);
+  }
+  &__logo {
+    width: 140px;
+    @include mixins.mobile {
+      width: 200px;
+    }
+  }
+
+  &__mid {
+    column-gap: 100px;
+  }
+  &__check {
+    padding: 10px 40px 10px 30px;
+    font-weight: 600;
+    max-width: 215px;
+    column-gap: 0;
+    line-height: 14px;
+    &_icon {
+      width: 32px;
+      height: 32px;
+    }
+  }
+  &__location {
+    &_icon {
+      width: 12px;
+      height: 16px;
+    }
+  }
+  &__contact {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+
+    &_phone {
+      color: var(--base);
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 30px;
+    }
+    &_call {
+      padding-bottom: 1px;
+      border-bottom: 1px dashed;
+      font-size: 14px;
+      color: var(--green);
+    }
+  }
+  &__right {
+    column-gap: 40px;
+  }
+  &__buttons {
+    column-gap: 20px;
+    &_btn {
+      width: 46px;
+      height: 38px;
+
+      i {
+        display: block;
+        width: 28px;
+        height: 28px;
+      }
+
+      span {
+        width: 23px;
+        height: 23px;
+        border-radius: 50%;
+
+        background: var(--green);
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--white);
+
+        transition: all 0.2s ease;
+      }
+
+      &:hover {
+        span {
+          transform: scale(1.1, 1.1);
+        }
+      }
+    }
+  }
+}

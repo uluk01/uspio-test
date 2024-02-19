@@ -1,0 +1,40 @@
+$container-padding-x: 30px;
+
+$container-max-widths: (
+  lg: calc(900px + $container-padding-x),
+  xl: calc(1000px + $container-padding-x),
+  xxl: calc(1170px + $container-padding-x),
+);
+
+$font-family-base: 'Proxima Nova', sans-serif;
+
+$display-font-sizes: (
+  6: 2.625rem,
+);
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.625,
+  2: $spacer * 0.74999,
+  3: $spacer * 1.25,
+  4: $spacer * 1.876,
+  5: $spacer * 3.75,
+);
+
+$light: #f4f4f4;
+$primary: #37454a;
+$danger: #e34c4c;
+$dark: #000;
+$success: #6eb744;
+
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+.vr {
+  height: 100%;
+  background-color: #e4e4e4;
+  align-self: center;
+  opacity: 1;
+  border: none;
+  margin: 0;
+}

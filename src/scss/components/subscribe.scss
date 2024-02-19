@@ -1,0 +1,27 @@
+@use '../utils/mixins.scss';
+
+.subscribe {
+  &__form {
+    column-gap: 15px;
+  }
+  &__input {
+    @include mixins.input-reset;
+    padding: 10px 30px;
+    max-width: 210px;
+    width: 100%;
+    border-radius: 26px;
+    border: 1px solid var(--green);
+    font-weight: 600;
+    color: var(--primary);
+    transition: all 0.2s linear;
+
+    &:focus {
+      outline: none;
+      box-shadow: var(--shadow-green);
+    }
+
+    &::placeholder {
+      color: var(--primary);
+    }
+  }
+}

@@ -1,0 +1,41 @@
+.breadcrumbs {
+  $self: &;
+  &__list {
+    display: flex;
+    column-gap: 8px;
+    padding: 0;
+
+    list-style: none;
+  }
+  &__item {
+    & + &::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      background-image: var(--right-angle);
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+      display: inline-block;
+      opacity: 0.3;
+    }
+
+    &-active #{$self}__link {
+      color: var(--light-grey);
+    }
+  }
+  &__link {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1rem;
+    color: #76b926;
+    &-home {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  &__icon {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+  }
+}

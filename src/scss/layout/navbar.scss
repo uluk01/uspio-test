@@ -1,0 +1,89 @@
+@use '../utils/mixins.scss';
+
+.navbar {
+  --bs-navbar-padding-y: 0;
+  position: relative;
+  background: var(--green);
+  overflow: hidden;
+  z-index: 0;
+
+  &::before {
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background: var(--green-dark);
+    content: '';
+    z-index: -1;
+
+    @include mixins.desktop {
+      width: 50%;
+    }
+  }
+
+  &__inner {
+    height: 70px;
+  }
+  &__list {
+    height: 100%;
+    background: var(--green);
+
+    display: flex;
+    flex-basis: auto;
+    flex-grow: 1;
+    align-items: center;
+  }
+
+  &-nav {
+    --bs-nav-link-padding-y: 4px;
+    --bs-nav-link-color: var(--white);
+    --bs-navbar-active-color: var(--white);
+    --bs-nav-link-hover-color: var(--white);
+    --bs-navbar-nav-link-padding-x: 28px;
+  }
+  & .nav-link {
+    padding: 0 28px;
+    border-right: 1px solid rgba(55, 69, 74, 0.2);
+    span {
+      border-bottom: 1px solid transparent;
+      transition: border 0.2s ease-in-out;
+
+      &:hover {
+        border-bottom-color: var(--light-color);
+      }
+    }
+  }
+  &__search {
+    width: 61px;
+    background: var(--green-dark);
+    text-align: end;
+    &_form {
+      button {
+        @include mixins.button-reset;
+        color: var(--white);
+
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+      input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        margin-right: 42px;
+        background: var(--green-dark);
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+        transform: translateX(100%);
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+}

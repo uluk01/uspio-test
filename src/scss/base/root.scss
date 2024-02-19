@@ -1,0 +1,13 @@
+:root {
+  --right-angle: url('data:image/svg+xml,<svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.25 5.00168L3.125 0H0.129838L3.27482 5.00168L0 10H3.125L6.25 5.00168Z" fill="%2337454a"/></svg>');
+  --button-gradient: linear-gradient(90deg, rgba(108, 182, 68, 1) 0%, rgba(130, 202, 44, 1) 100%);
+  --button-color: var(--button-gradient, rgb(108, 182, 68));
+  --header-height: 92px;
+
+  --primary: #37454a;
+  --green: #6eb744;
+  --red: #e34c4c;
+  --white: #fff;
+  --light-grey: rgba(55, 69, 74, 0.6);
+  --green-dark: #62a53c;
+}
