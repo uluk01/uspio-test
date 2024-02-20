@@ -1,14 +1,17 @@
 import Swiper from 'swiper';
+// eslint-disable-next-line import/no-unresolved
 import { Autoplay } from 'swiper/modules';
+import { Fancybox } from '@fancyapps/ui';
 
+// eslint-disable-next-line no-unused-vars
 const swiper = new Swiper('.swiper', {
   modules: [Autoplay],
   loop: true,
-  // autoplay: {
-  //   delay: 5000,
-  //   disableOnInteraction: false,
-  //   pauseOnMouseEnter: true,
-  // },
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  },
   slidesPerView: 1,
   autoHeight: true,
   breakpoints: {
@@ -23,7 +26,6 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-import { Fancybox } from '@fancyapps/ui';
 Fancybox.bind('[data-fancybox]');
 
 const form = document.querySelector('.subscribe__form');
@@ -39,6 +41,7 @@ form.addEventListener('submit', (e) => {
     })
     .catch((error) => {
       formButton.classList.add('is-error');
+      console.error(error);
     })
     .finally(() => {
       form.reset();
