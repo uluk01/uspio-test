@@ -1,0 +1,762 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Uspio Test</title>
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="css/main.min.css" />
+
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"
+  ></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script defer src="js/main.min.js"></script>
+</head>
+
+
+  <body>
+    <header class="header">
+  <div class="container">
+    <div class="header__inner d-flex justify-content-between align-items-center">
+      <a href="#" class="header__logo text-dark ms-xl-4" aria-label="Site Logo">
+        <svg viewBox="0 0 204 60">
+          <use xlink:href="images/sprite.svg#logo"></use>
+        </svg>
+      </a>
+      <hr class="vr d-none d-xxl-inline-block" />
+      <div class="header__mid align-items-center d-none d-xxl-flex">
+        <div class="header__location">
+          <p class="text-uppercase fw-bold m-0">Текст Текст</p>
+          <div class="d-flex align-items-center">
+            <button type="button" class="d-flex align-items-center pe-1">
+              <svg viewBox="0 0 14 16" class="header__location_icon me-1">
+                <use xlink:href="/images/sprite.svg#location"></use>
+              </svg>
+              <span class="text-success fw-bold">Тексттт (10)</span>
+            </button>
+            <hr class="vr d-none d-lg-inline-block" />
+            <span class="ms-1">текст (10)</span>
+          </div>
+        </div>
+        <button class="button button-outlined button-has_icon header__check fw-600 text-capitalize text-start" type="button" data-bs-toggle="modal" data-bs-target="#appointmentModal">
+          <span class="d-inline-block me-1 text-success">
+            <svg viewBox="0 0 31 32" class="header__check_icon me-1">
+              <use xlink:href="/images/sprite.svg#check"></use>
+            </svg>
+          </span>
+          <span class="button__text">Запишитесь на проверку</span>
+        </button>
+      </div>
+      <hr class="vr d-none d-xxl-inline-block" />
+      <div class="header__right d-flex align-items-center">
+        <div class="header__contact d-none d-lg-flex">
+          <a class="header__contact_phone" href="tel:+78001111111">
+            <span>+7 (800) 111-111-1</span>
+          </a>
+          <button class="header__contact_call" type="button" data-bs-toggle="modal" data-bs-target="#callModal">Перезвоните мне</button>
+        </div>
+        <div class="header__buttons d-flex align-items-center">
+          <a class="header__buttons_btn d-flex align-items-end position-relative text-danger" href="/wishlist">
+            <i>
+              <svg viewBox="0 0 28 24">
+                <use xlink:href="images/sprite.svg#wishlist"></use>
+              </svg>
+            </i>
+            <span class="position-absolute top-0 end-0 d-flex justify-content-center align-items-center"> 7</span>
+          </a>
+          <a class="header__buttons_btn d-flex align-items-end position-relative" href="/cart">
+            <i>
+              <svg viewBox="0 0 30 28">
+                <use xlink:href="images/sprite.svg#cart"></use>
+              </svg>
+            </i>
+            <span class="position-absolute top-0 end-0 d-flex justify-content-center align-items-center">3</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+ <nav class="navbar">
+  <div class="navbar__inner container">
+    <button class="navbar-toggler d-xxl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar__list justify-content-center d-none d-xxl-flex" id="navbarScroll">
+      <ul class="navbar-nav flex-row">
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <span>Текст текст</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <span>Текст текст текст</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <span>Текст текст</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <span>Текст текст</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <span>Текст текст</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">
+            <span>Текст текст</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="navbar__search">
+      <form class="navbar__search_form">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+        <button type="button">
+          <svg viewBox="0 0 24 24" class="svg-icon">
+            <use xlink:href="/images/sprite.svg#search"></use>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+    <div class="main">
+      <section class="hero bg-light">
+  <div class="container">
+    <div class="hero__inner row g-0">
+      <div class="col-md-7 pe-3">
+        <div class="hero__content pt-3 pb-5">
+          <nav class="breadcrumbs">
+  <ul class="breadcrumbs__list">
+    <li class="breadcrumbs__item">
+      <a href="/" class="breadcrumbs__link breadcrumbs__link-home">
+        <svg viewBox="0 0 16 16">
+          <use xlink:href="images/sprite.svg#home"></use>
+        </svg>
+      </a>
+    </li>
+    <li class="breadcrumbs__item breadcrumbs__item-active">
+      <span class="breadcrumbs__link"> Текст текст </span>
+    </li>
+  </ul>
+</nav>
+
+          <h1 class="display-6 mt-xl-4 mb-xl-5 mt-3 mb-4 fw-bold">Заголовок <span class="text-success">текст текст</span> текст текст текст текст</h1>
+          <div class="mb-4">
+            <p class="mb-3">
+              текст текст, текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+              текст текст текст текст текст.
+            </p>
+            <p>Текст – текст текст текст текст текст , текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст.</p>
+          </div>
+          <button class="button  button-outlined" type="button" data-bs-toggle="modal" data-bs-target="#appointmentModal" >
+  <span class="button__text">Записаться на проверку</span>
+  
+</button>
+
+        </div>
+      </div>
+      <div class="hero__image col-md-5 d-none d-md-flex">
+        <a href="images/hero.jpg" data-fancybox data-caption="Hero Image">
+          <img class="img-fluid" src="images/hero.jpg" alt="Hero Image" loading="lazy" />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+ <section id="points" class="points">
+  <div class="container">
+    <div class="points__inner pb-5">
+      <h3 class="text-center fw-bold m-0">Заголовок заголовок заголовок</h3>
+      <div class="points__list my-4 row gx-4">
+        <div class="col-md-6 col-lg-4 py-2"><div class="point position-relative h-100">
+  <div class="point__box text-center text-primary">
+    <div class="point__icon">
+      <i>
+        <svg viewBox="0 0 41 31">
+          <use xlink:href="images/sprite.svg#point_1"></use>
+        </svg>
+      </i>
+    </div>
+    <div class="point__content">
+      <p class="point__text m-0 fw-bold text-uppercase">Текст Текст текст Текст текст Текст</p>
+    </div>
+  </div>
+</div>
+</div>
+        <div class="col-md-6 col-lg-4 py-2"><div class="point position-relative h-100">
+  <div class="point__box text-center text-primary">
+    <div class="point__icon">
+      <i>
+        <svg viewBox="0 0 41 31">
+          <use xlink:href="images/sprite.svg#point_2"></use>
+        </svg>
+      </i>
+    </div>
+    <div class="point__content">
+      <p class="point__text m-0 fw-bold text-uppercase">Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст</p>
+    </div>
+  </div>
+</div>
+</div>
+        <div class="col-md-6 col-lg-4 py-2"><div class="point position-relative h-100">
+  <div class="point__box text-center text-primary">
+    <div class="point__icon">
+      <i>
+        <svg viewBox="0 0 41 31">
+          <use xlink:href="images/sprite.svg#point_3"></use>
+        </svg>
+      </i>
+    </div>
+    <div class="point__content">
+      <p class="point__text m-0 fw-bold text-uppercase">Текст Текст Текст Текст</p>
+    </div>
+  </div>
+</div>
+</div>
+        <div class="col-md-6 col-lg-4 py-2"><div class="point position-relative h-100">
+  <div class="point__box text-center text-primary">
+    <div class="point__icon">
+      <i>
+        <svg viewBox="0 0 41 31">
+          <use xlink:href="images/sprite.svg#point_4"></use>
+        </svg>
+      </i>
+    </div>
+    <div class="point__content">
+      <p class="point__text m-0 fw-bold text-uppercase">Текст Текст Текст Текст Текст Текст Текст Текст</p>
+    </div>
+  </div>
+</div>
+</div>
+        <div class="col-md-6 col-lg-4 py-2"><div class="point position-relative h-100">
+  <div class="point__box text-center text-primary">
+    <div class="point__icon">
+      <i>
+        <svg viewBox="0 0 41 31">
+          <use xlink:href="images/sprite.svg#point_5"></use>
+        </svg>
+      </i>
+    </div>
+    <div class="point__content">
+      <p class="point__text m-0 fw-bold text-uppercase">Текст Текст Текст Текст Текст Текст</p>
+    </div>
+  </div>
+</div>
+</div>
+        <div class="col-md-6 col-lg-4 py-2"><div class="point position-relative h-100">
+  <div class="point__box text-center text-primary">
+    <div class="point__icon">
+      <i>
+        <svg viewBox="0 0 41 31">
+          <use xlink:href="images/sprite.svg#point_6"></use>
+        </svg>
+      </i>
+    </div>
+    <div class="point__content">
+      <p class="point__text m-0 fw-bold text-uppercase">Текст Текст текст Текст текст Текст</p>
+    </div>
+  </div>
+</div>
+</div>
+      </div>
+      <div class="points__button text-center"><button class="button button-has_icon " type="button" data-bs-toggle="modal" data-bs-target="#appointmentModal" >
+  <span class="button__text">Записаться на проверку </span>
+  
+  <span class="button__icon">
+    <svg viewBox="0 0 7 10">
+      <use xlink:href="images/sprite.svg#angle"></use>
+    </svg>
+  </span>
+  
+</button>
+</div>
+    </div>
+  </div>
+</section>
+ <section id="text_media" class="text_media">
+  <div class="container">
+    <div class="text_media__inner row pb-5 gy-4 gy-md-0">
+      <div class="col-md-8">
+        <h3 class="fw-bold mb-4">Текст текст:</h3>
+        <ul class="fw-normal text_media__content">
+          <li>текст текст</li>
+          <li>текст текст текст текст</li>
+          <li>текст</li>
+          <li>текст текст текст текст текст текст текст текст текст текст текст текст</li>
+          <li>текст текст текст текст текст текст текст текст текст текст</li>
+          <li>текст текст текст текст текст текст текст текст текст текст текст текст текст текст</li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <a href="images/test.png" data-fancybox data-caption="Text Image">
+          <img src="images/test.png" alt="Text Image" loading="lazy" />
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+ <section id="how_it_works" class="how_it_works bg-light">
+  <div class="container">
+    <div class="how_it_works__inner py-5">
+      <h3 class="fw-bold">Заголовок</h3>
+      <div class="how_it_works__list mt-4">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><div class="work card">
+  <a href="images/work_2.png" data-fancybox class="work__image card-img-top">
+    <div class="work__image_circle">
+      <img src="images/work_2.png" alt="Вопрос вопрос вопрос? image" loading="lazy" />
+    </div>
+  </a>
+  <div class="card-body">
+    <h5 class="card-title fw-bold">Вопрос вопрос вопрос?</h5>
+    <p class="card-text">Текст Текст Текст Текст Текст Текст</p>
+  </div>
+</div>
+</div>
+            <div class="swiper-slide cirscle-bottom">
+              <div class="work card">
+  <a href="images/work_3.png" data-fancybox class="work__image card-img-top">
+    <div class="work__image_circle">
+      <img src="images/work_3.png" alt="Вопрос вопрос вопрос? image" loading="lazy" />
+    </div>
+  </a>
+  <div class="card-body">
+    <h5 class="card-title fw-bold">Вопрос вопрос вопрос?</h5>
+    <p class="card-text">Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст</p>
+  </div>
+</div>
+
+            </div>
+            <div class="swiper-slide circle-top-right">
+              <div class="work card">
+  <a href="images/work_1.png" data-fancybox class="work__image card-img-top">
+    <div class="work__image_circle">
+      <img src="images/work_1.png" alt="Вопрос вопрос вопрос? image" loading="lazy" />
+    </div>
+  </a>
+  <div class="card-body">
+    <h5 class="card-title fw-bold">Вопрос вопрос вопрос?</h5>
+    <p class="card-text">Текст Текст Текст Текст Текст Текст</p>
+  </div>
+</div>
+
+            </div>
+            <div class="swiper-slide"><div class="work card">
+  <a href="images/work_2.png" data-fancybox class="work__image card-img-top">
+    <div class="work__image_circle">
+      <img src="images/work_2.png" alt="Вопрос вопрос вопрос? image" loading="lazy" />
+    </div>
+  </a>
+  <div class="card-body">
+    <h5 class="card-title fw-bold">Вопрос вопрос вопрос?</h5>
+    <p class="card-text">Текст Текст Текст Текст Текст Текст</p>
+  </div>
+</div>
+</div>
+            <div class="swiper-slide cirscle-bottom">
+              <div class="work card">
+  <a href="images/work_3.png" data-fancybox class="work__image card-img-top">
+    <div class="work__image_circle">
+      <img src="images/work_3.png" alt="Вопрос вопрос вопрос? image" loading="lazy" />
+    </div>
+  </a>
+  <div class="card-body">
+    <h5 class="card-title fw-bold">Вопрос вопрос вопрос?</h5>
+    <p class="card-text">Текст Текст Текст Текст Текст Текст Текст Текст Текст Текст</p>
+  </div>
+</div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="mt-3">
+        *текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст.
+      </p>
+    </div>
+  </div>
+</section>
+ <section id="question" class="question">
+  <div class="container">
+    <div class="question__inner py-5">
+      <div class="question__box card mb-4 bg-light">
+        <div class="row g-0">
+          <div class="col-md-7">
+            <div class="card-body p-4 pb-5">
+              <h3 class="card-title fw-bold mb-4">Вопрос вопрос вопрос вопрос вопрос вопрос вопрос?</h3>
+              <div class="question__content mb-4">
+                <ol class="fw-normal">
+                  <li>текст текст</li>
+                  <li>текст текст текст текст</li>
+                  <li>текст</li>
+                  <li>текст текст текст текст текст текст текст текст текст текст текст текст</li>
+                  <li>текст текст текст текст текст текст текст текст текст текст</li>
+                </ol>
+                <p class="card-text">
+                  Текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                  текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст текст
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="question__img col-md-5 position-relative">
+            <a href="images/question.png" data-fancybox data-caption="Question image">
+              <img class="question__image img-fluid position-absolute" src="images/question.png" alt="Question image" loading="lazy" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="question__button text-center"><button class="button button-has_icon " type="button" data-bs-toggle="modal" data-bs-target="#appointmentModal" >
+  <span class="button__text">Записаться на проверку </span>
+  
+  <span class="button__icon">
+    <svg viewBox="0 0 7 10">
+      <use xlink:href="images/sprite.svg#angle"></use>
+    </svg>
+  </span>
+  
+</button>
+</div>
+    </div>
+  </div>
+</section>
+
+    </div>
+    <footer class="footer">
+  <div class="footer__top">
+    <div class="container">
+      <div class="footer__top_list row align-items-center gx-4 gy-3">
+        <div class="col-3 d-none d-xxl-block">
+          <h6 class="footer__top_title m-0 text-primary fw-bold">Текст текст текст текст текст текст текст</h6>
+        </div>
+        <div class="col-md-6 col-xxl-5"><div class="subscribe text-center">
+  <form action="" class="subscribe__form d-flex justify-content-center">
+    <input class="subscribe__input" type="text" required placeholder="Введите свой e-mail" />
+    <button class="subscribe__button button" type="submit">
+      <span class="button__text"> Подписаться </span>
+    </button>
+  </form>
+</div>
+</div>
+        <div class="footer__socials col-md-6 col-xxl-4 d-flex align-items-center">
+          <p class="socials__title m-0 fw-bold">МЫ В СОЦ. СЕТЯХ:</p>
+          <div class="footer__socials_list d-flex">
+            <a href="#" class="footer__socials_link bg-light d-flex align-items-center justify-content-center">
+              <svg viewBox="0 0 20 21">
+                <use xlink:href="images/sprite.svg#vk"></use>
+              </svg>
+            </a>
+            <a href="#" class="footer__socials_link bg-light d-flex align-items-center justify-content-center">
+              <svg viewBox="0 0 20 21">
+                <use xlink:href="images/sprite.svg#facebook"></use>
+              </svg>
+            </a>
+            <a href="#" class="footer__socials_link bg-light d-flex align-items-center justify-content-center">
+              <svg viewBox="0 0 20 21">
+                <use xlink:href="images/sprite.svg#instagram"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__mid bg-light">
+    <div class="container">
+      <div class="footer__inner row g-0">
+        <div class="footer__contacts col-lg-3">
+          <div class="footer__contacts_actions d-flex flex-column align-items-lg-start justify-content-start pb-3">
+            <a href="#" class="footer__logo text-dark mb-3" aria-label="Site Logo">
+              <svg viewBox="0 0 204 60">
+                <use xlink:href="images/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <a href="tel:+7 (800) 111-111-1" class="footer__icon d-flex align-items-center mb-1">
+              <svg viewBox="0 0 16 17" class="svg-icon">
+                <use xlink:href="/images/sprite.svg#phone"></use>
+              </svg>
+              +7 (800) 111-111-1
+            </a>
+            <a href="mailto:info@vimeo.ru" class="footer__icon d-flex align-items-center mb-1">
+              <svg viewBox="0 0 16 17" class="svg-icon">
+                <use xlink:href="/images/sprite.svg#email"></use>
+              </svg>
+              info@vimeo.ru
+            </a>
+            <a href="##" class="footer__icon d-flex align-items-center mb-1">
+              <svg viewBox="0 0 16 17" class="svg-icon">
+                <use xlink:href="/images/sprite.svg#question"></use>
+              </svg>
+              Задать вопрос
+            </a>
+            <a href="##" class="footer__icon d-flex align-items-center mb-1">
+              <svg viewBox="0 0 16 17" class="svg-icon">
+                <use xlink:href="/images/sprite.svg#review"></use>
+              </svg>
+              Оставить отзыв
+            </a>
+          </div>
+          <div class="footer__contacts_text text-center text-lg-start mt-3">текст текст текст текст текст текст текст текст текст текст текст текст текст</div>
+        </div>
+        <div class="footer__menu col-lg-9 mt-3 text-center text-sm-start ps-lg-3">
+          <div class="footer__menu_groups d-flex align-items-center justify-content-between flex-column flex-sm-wrap flex-sm-row align-items-sm-start">
+            <div class="footer__menu_group">
+              <div class="footer__menu_title mb-1 fw-bold">Заголовок</div>
+              <ul class="footer__menu_list">
+                <li class="footer__menu_item">
+                  <a href="#" class="footer__menu_link">Название</a>
+                </li>
+                <li class="footer__menu_item">
+                  <a href="#" class="footer__menu_link">Название Название</a>
+                </li>
+                <li class="footer__menu_item">
+                  <a href="#" class="footer__menu_link">Название Название</a>
+                </li>
+                <li class="footer__menu_item">
+                  <a href="#" class="footer__menu_link">Название</a>
+                </li>
+                <li class="footer__menu_item">
+                  <a href="#" class="footer__menu_link">НазваниеНазвание</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__menu_group">
+              <div class="footer__menu_title mb-1 fw-bold">Заголовок</div>
+              <ul class="footer__menu_list">
+                <li class="footer__menu_item">
+                  <a href="#" class="footer__menu_link">Название</a>
+                </li>
+                <li class="footer__menu_item">
+                  <a href="#" class="footer__menu_link">Название Название</a>
+                </li>
+                <li class="footer__menu_item">
+                  <a href="#" class="footer__menu_link">Название Название</a>
+                </li>
+                <li class="footer__menu_item">
+                  <a href="#" class="footer__menu_link">Название Название</a>
+                </li>
+                <li class="footer__menu_item">
+                  <a href="#" class="footer__menu_link">Название</a>
+                </li>
+                <li class="footer__menu_item">
+                  <a href="#" class="footer__menu_link">Название</a>
+                </li>
+                <li class="footer__menu_item">
+                  <a href="#" class="footer__menu_link">Название Название</a>
+                </li>
+                <li class="footer__menu_item">
+                  <a href="#" class="footer__menu_link">Название</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__menu_group">
+              <div class="footer__menu_title mb-1 fw-bold">Заголовок Заголовок</div>
+              <ul class="footer__menu_list">
+                <li class="footer__menu_item">
+                  <a href="#" class="footer__menu_link">Название</a>
+                </li>
+                <li class="footer__menu_item">
+                  <a href="#" class="footer__menu_link">Название</a>
+                </li>
+                <li class="footer__menu_item">
+                  <a href="#" class="footer__menu_link">Название</a>
+                </li>
+                <li class="footer__menu_item">
+                  <a href="#" class="footer__menu_link">Название</a>
+                </li>
+                <li class="footer__menu_item">
+                  <a href="#" class="footer__menu_link">Название</a>
+                </li>
+                <li class="footer__menu_item">
+                  <a href="#" class="footer__menu_link">Название Название</a>
+                </li>
+                <li class="footer__menu_item">
+                  <a href="#" class="footer__menu_link">Название</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__menu_group">
+              <div class="footer__menu_title mb-1 fw-bold">Заголовок</div>
+              <ul class="footer__menu_list">
+                <li class="footer__menu_item">
+                  <a href="#" class="footer__menu_link">Название</a>
+                </li>
+                <li class="footer__menu_item">
+                  <a href="#" class="footer__menu_link">Название</a>
+                </li>
+                <li class="footer__menu_item">
+                  <a href="#" class="footer__menu_link">Название</a>
+                </li>
+                <li class="footer__menu_item">
+                  <a href="#" class="footer__menu_link">Название Название</a>
+                </li>
+                <li class="footer__menu_item">
+                  <a href="#" class="footer__menu_link">Название</a>
+                </li>
+                <li class="footer__menu_item">
+                  <a href="#" class="footer__menu_link">Название</a>
+                </li>
+                <li class="footer__menu_item">
+                  <a href="#" class="footer__menu_link">Название</a>
+                </li>
+                <li class="footer__menu_item">
+                  <a href="#" class="footer__menu_link">Название</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__privacy py-4 bg-white">
+    <div class="container">
+      <a href="#" class="footer__privacy_link">Политика конфиденциальности</a>
+      <p class="m-0">© Все права защищены авторским правом</p>
+    </div>
+  </div>
+</footer>
+ <div class="modal fade" id="appointmentModal" tabindex="-1" aria-labelledby="Make an appointment modal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Запишитесь на проверку</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="email" class="form-label">Имейл</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" />
+          </div>
+          <div class="mb-3">
+            <label for="tel" class="form-label">Телефон</label>
+            <input type="tel" class="form-control" id="tel" />
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="checkbox" />
+            <label class="form-check-label" for="checkbox"> Я хочу получить информацию о новостях и акциях компании </label>
+          </div>
+          <div class="text-end">
+            <button type="submit" class="btn btn-primary">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+ <div class="modal fade" id="callModal" tabindex="-1" aria-labelledby="Call me modal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Напишите контакты для обратной связи</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Фио</label>
+            <input type="text" class="form-control" id="name" aria-describedby="emailHelp" />
+          </div>
+          <div class="mb-3">
+            <label for="tel" class="form-label">Телефон</label>
+            <input type="tel" class="form-control" id="tel" />
+          </div>
+          <button type="submit" class="btn btn-primary">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+ <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">Menu</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="mt-2">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link text-primary" href="#">
+            <span>Текст текст</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-primary" href="#">
+            <span>Текст текст текст</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-primary" href="#">
+            <span>Текст текст</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-primary" href="#">
+            <span>Текст текст</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-primary" href="#">
+            <span>Текст текст</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-primary" href="#">
+            <span>Текст текст</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="header__location mt-3">
+      <p class="text-uppercase fw-bold m-0">Текст Текст</p>
+      <div class="d-flex">
+        <button type="button" class="d-flex align-items-center pe-1">
+          <svg viewBox="0 0 14 16" class="header__location_icon me-1">
+            <use xlink:href="/images/sprite.svg#location"></use>
+          </svg>
+          <span class="text-success fw-bold">Тексттт (10)</span>
+        </button>
+        <hr class="vr d-none d-lg-inline-block" />
+        <span class="ms-1">текст (10)</span>
+      </div>
+    </div>
+    <div class="header__contact mt-3 align-items-start">
+      <a class="header__contact_phone" href="tel:+78001111111">
+        <span>+7 (800) 111-111-1</span>
+      </a>
+      <button class="header__contact_call" type="button" data-bs-toggle="modal" data-bs-target="#callModal">Перезвоните мне</button>
+    </div>
+    <div>
+      <button class="button button-outlined button-has_icon header__check fw-600 text-capitalize text-start mt-3" type="button" data-bs-toggle="modal" data-bs-target="#appointmentModal">
+        <span class="d-inline-block me-1 text-success">
+          <svg viewBox="0 0 31 32" class="header__check_icon me-1">
+            <use xlink:href="/images/sprite.svg#check"></use>
+          </svg>
+        </span>
+        <span class="button__text">Запишитесь на проверку</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+  </body>
+</html>
