@@ -23,10 +23,6 @@
     &_link {
       width: 60px;
       height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: red;
       border-radius: 50%;
 
       svg {
@@ -43,57 +39,39 @@
     width: 200px;
   }
 
-  &__contacts-actions {
-    display: flex;
-    flex-direction: column;
+  &__contacts_actions {
     align-items: center;
-    justify-content: flex-start;
-    padding-bottom: 20px;
-    border-bottom: 1px solid var(--light-gray-2);
+    border-bottom: 1px solid var(--border-color);
   }
 
-  &__contacts-text-bottom {
-    margin-top: 20px;
+  &__contacts_text {
     font-size: 14px;
     line-height: 22px;
-    color: var(--base-alpha);
+    color: var(--light-grey);
   }
 
-  &__menu {
-    margin-top: 20px;
-    padding-left: 30px;
+  &__menu_groups {
+    column-gap: 30px;
   }
 
-  &__menu-groups {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-
-  &__menu-group {
+  &__menu_group {
     flex: 0 0 auto;
     margin-bottom: 15px;
   }
 
-  &__menu-title {
-    margin-bottom: 10px;
-    font-weight: 700;
-  }
-
-  &__menu-list {
+  &__menu_list {
     margin: 0;
     padding: 0;
     list-style: none;
   }
 
-  &__menu-item {
+  &__menu_item {
     margin-bottom: 10px;
   }
 
-  &__menu-link {
+  &__menu_link {
     text-decoration: none;
-    color: var(--base-alpha);
+    color: var(--light-grey);
     transition: color 0.2s linear;
 
     &:hover {
@@ -106,7 +84,7 @@
     align-items: center;
     justify-content: flex-start;
     height: 100px;
-    background: var(--light-color);
+    background: var(--white);
     font-size: 14px;
     line-height: 20px;
     color: var(--light-grey);
@@ -121,6 +99,8 @@
   }
 
   &__icon {
+    color: var(--light-grey);
+    column-gap: 10px;
     svg {
       width: 16px;
       height: 16px;
