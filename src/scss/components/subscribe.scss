@@ -4,8 +4,10 @@
   &__form {
     column-gap: 15px;
   }
+
   &__input {
     @include mixins.input-reset;
+
     padding: 10px 30px;
     max-width: 210px;
     width: 100%;

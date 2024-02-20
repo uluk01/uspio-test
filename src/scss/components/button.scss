@@ -1,5 +1,6 @@
 .button {
   $self: &;
+
   padding: 15px 30px;
   background: var(--button-color);
   border-radius: 35px;
@@ -50,6 +51,7 @@
 
     &:hover {
       --bs-success-rgb: var(--white);
+
       opacity: 1;
       background: var(--button-color);
       color: var(--white);

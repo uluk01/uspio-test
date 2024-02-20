@@ -1,15 +1,15 @@
-import gulp from "gulp";
-import webp from "gulp-webp";
-import imageMin from "gulp-imagemin";
+import gulp from 'gulp';
+import webp from 'gulp-webp';
+import imageMin from 'gulp-imagemin';
 
-import { plugins } from "../config/plugins.js";
-import { filePaths } from "../config/paths.js";
-import { logger } from "../config/logger.js";
+import { plugins } from '../config/plugins.js';
+import { filePaths } from '../config/paths.js';
+import { logger } from '../config/logger.js';
 
-const images = (isBuild) => {
-  return gulp
+const images = (isBuild) =>
+  gulp
     .src(filePaths.src.images)
-    .pipe(logger.handleError("IMAGES"))
+    .pipe(logger.handleError('IMAGES'))
     .pipe(plugins.newer(filePaths.build.images))
     .pipe(plugins.if(isBuild, webp()))
     .pipe(plugins.if(isBuild, gulp.dest(filePaths.build.images)))
@@ -30,6 +30,5 @@ const images = (isBuild) => {
     .pipe(gulp.src(filePaths.src.svg))
     .pipe(gulp.dest(filePaths.build.images))
     .pipe(plugins.browserSync.stream());
-};
 
 export { images };

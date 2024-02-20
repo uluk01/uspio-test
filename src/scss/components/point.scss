@@ -10,9 +10,11 @@
     z-index: -1;
     border-radius: 15px;
   }
+
   &__box {
     min-height: 227px;
   }
+
   &__icon {
     width: 74px;
     height: 74px;
@@ -29,6 +31,7 @@
       height: 31px;
     }
   }
+
   &__content {
     padding: 40px 40px 30px;
     font-size: 18px;

@@ -7,8 +7,8 @@ import { plugins } from '../config/plugins.js';
 import { filePaths } from '../config/paths.js';
 import { logger } from '../config/logger.js';
 
-const html = (isBuild) => {
-  return gulp
+const html = (isBuild) =>
+  gulp
     .src(filePaths.src.html)
     .pipe(logger.handleError('HTML'))
     .pipe(fileInclude())
@@ -34,6 +34,5 @@ const html = (isBuild) => {
     )
     .pipe(gulp.dest(filePaths.buildFolder))
     .pipe(plugins.browserSync.stream());
-};
 
 export { html };

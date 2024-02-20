@@ -16,6 +16,7 @@
   border: 0;
   cursor: pointer;
   user-select: none;
+
   @include no-outline;
 
   * {
@@ -30,7 +31,9 @@
   background: transparent;
   color: inherit;
   border-radius: 0;
+
   @include no-outline;
+
   &:disabled {
     cursor: default;
     opacity: 0.7;
@@ -66,6 +69,7 @@
 
 @function rem($size) {
   $remSize: math.div(parseInt($size), parseInt(16px));
+
   @return $remSize * 1rem;
 }
 

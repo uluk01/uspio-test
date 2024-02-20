@@ -6,9 +6,9 @@
   "type": "module",
   "scripts": {
     "dev": "gulp",
-    "build": "gulp build --build",
+    "build": "gulp build && gh-pages -d dist",
     "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,json,html,css,md,yaml,yml}\"",
-    "lint": "npx stylelint '**/*.scss'"
+    "lint": "npx stylelint '**/*.scss' eslint --fix .js src"
   },
   "author": "",
   "license": "ISC",
@@ -30,6 +30,7 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "gh-pages": "^6.1.1",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^9.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
@@ -47,6 +48,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-sass-bulk-importer": "^3.0.2",
     "gulp-sourcemaps": "^3.0.0",
+    "gulp-svg-sprite": "^2.0.3",
     "gulp-uglify-es": "^3.0.0",
     "gulp-version-number": "^0.2.4",
     "gulp-webp": "^5.0.0",
@@ -67,10 +69,7 @@
   "dependencies": {
     "@fancyapps/ui": "^5.0.33",
     "bootstrap": "^5.3.2",
-    "gulp-fonter-fix": "^0.0.1",
     "jquery": "^3.7.1",
-    "swiper": "^11.0.6",
-    "gulp": "^4.0.2",
-    "gulp-svg-sprite": "^2.0.3"
+    "swiper": "^11.0.6"
   }
 }

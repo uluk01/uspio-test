@@ -1,10 +1,4 @@
-<button
-  class="button @@if (context.icon){button-has_icon} @@if (context.outlined){button-outlined}"
-  type="button"
-  @@if(context.modal){data-bs-toggle="modal"
-  data-bs-target="#@@modal"
-  }
->
+<button class="button @@if (context.icon){button-has_icon} @@if (context.outlined){button-outlined}" type="button" @@if(context.modal){data-bs-toggle="modal" data-bs-target="#@@modal" }>
   <span class="button__text">@@text</span>
   @@if (context.icon){
   <span class="button__icon">

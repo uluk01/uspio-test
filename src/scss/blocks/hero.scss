@@ -3,6 +3,7 @@
 .hero {
   &__image {
     position: relative;
+
     @include mixins.desktop {
       padding-left: 87px;
     }

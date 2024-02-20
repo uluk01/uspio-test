@@ -2,6 +2,7 @@
 
 .navbar {
   --bs-navbar-padding-y: 0;
+
   position: relative;
   background: var(--green);
   overflow: hidden;
@@ -25,10 +26,10 @@
   &__inner {
     height: 70px;
   }
+
   &__list {
     height: 100%;
     background: var(--green);
-
     display: flex;
     flex-basis: auto;
     flex-grow: 1;
@@ -42,9 +43,11 @@
     --bs-nav-link-hover-color: var(--white);
     --bs-navbar-nav-link-padding-x: 28px;
   }
+
   & .nav-link {
     padding: 0 28px;
-    border-right: 1px solid rgba(55, 69, 74, 0.2);
+    border-right: 1px solid rgb(55 69 74 / 20%);
+
     span {
       border-bottom: 1px solid transparent;
       transition: border 0.2s ease-in-out;
@@ -54,13 +57,16 @@
       }
     }
   }
+
   &__search {
     width: 61px;
     background: var(--green-dark);
     text-align: end;
+
     &_form {
       button {
         @include mixins.button-reset;
+
         color: var(--white);
 
         svg {
@@ -68,6 +74,7 @@
           height: 24px;
         }
       }
+
       input {
         position: absolute;
         top: 0;
@@ -76,10 +83,7 @@
         height: 70px;
         margin-right: 42px;
         background: var(--green-dark);
-        -webkit-transition: all 0.2s ease-in-out;
         transition: all 0.2s ease-in-out;
-        -webkit-transform: translateX(100%);
-        -ms-transform: translateX(100%);
         transform: translateX(100%);
         opacity: 0;
         visibility: hidden;

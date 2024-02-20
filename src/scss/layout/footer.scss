@@ -1,4 +1,5 @@
 @use '../utils/mixins.scss';
+
 .footer {
   &__top {
     padding: mixins.rem(25) 0;
@@ -9,6 +10,7 @@
       font-size: 18px;
     }
   }
+
   &__socials {
     column-gap: 30px;
     justify-content: center;
@@ -17,9 +19,11 @@
       justify-content: flex-end;
       padding-left: 50px;
     }
+
     &_list {
       column-gap: 15px;
     }
+
     &_link {
       width: 60px;
       height: 60px;
@@ -31,6 +35,7 @@
       }
     }
   }
+
   &__inner {
     padding: 18px 0;
   }
@@ -89,6 +94,7 @@
     line-height: 20px;
     color: var(--light-grey);
     box-shadow: var(--shadow-gray);
+
     &_link {
       font-size: 14px;
       font-family: 'Proxima Nova', sans-serif;
@@ -101,6 +107,7 @@
   &__icon {
     color: var(--light-grey);
     column-gap: 10px;
+
     svg {
       width: 16px;
       height: 16px;

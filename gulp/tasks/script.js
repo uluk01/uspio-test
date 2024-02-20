@@ -6,13 +6,12 @@ import { plugins } from '../config/plugins.js';
 import { filePaths } from '../config/paths.js';
 import { logger } from '../config/logger.js';
 
-const script = async (isDev) => {
-  return gulp
+const script = async (isDev) =>
+  gulp
     .src(filePaths.src.js)
     .pipe(logger.handleError('JS'))
     .pipe(webpack({ config: await webpackConfig(isDev) }))
     .pipe(gulp.dest(filePaths.build.js))
     .pipe(plugins.browserSync.stream());
-};
 
 export { script };
