@@ -33,6 +33,12 @@
         width: 20px;
         height: 20px;
       }
+
+      &-instagram {
+        background-image: var(--insta-icon);
+        background-repeat: no-repeat;
+        background-position: center;
+      }
     }
   }
 
